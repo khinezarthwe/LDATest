@@ -6,3 +6,4 @@ input.each_char do |c|
 	end
 end
 puts count
+puts input.split(",").count
