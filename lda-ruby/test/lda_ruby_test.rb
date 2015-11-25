@@ -1,4 +1,4 @@
-require 'rubygems'
+x§require 'rubygems'
 require 'test/unit'
 require 'shoulda'
 require 'yaml'
