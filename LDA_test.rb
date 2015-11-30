@@ -9,12 +9,17 @@ require 'lda-ruby'
   #str = ary.join(" ")
   #op << str
 #end
+
     corpus = Lda::DataCorpus.new("data/Data_song.dat")
     lda = Lda::Lda.new(corpus)    # create an Lda object for training
-    lda.em("random")              # run EM algorithm using random starting points
+               # run EM algorithm using random starting points0
     lda.load_vocabulary("data/vocab.txt")
-    lda.num_topics = 20
-    lda.print_topics(20)  
+    lda.verbose = false
+    lda.num_topics = 100
+    lda.em('random')
+    topics = lda.top_words(5)
+    lda.print_topics(10) 
+  
 
 # first open a file to write the result
 #op = File.open("data/cleaned2.dat", "w+") 

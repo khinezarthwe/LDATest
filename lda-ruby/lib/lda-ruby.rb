@@ -25,15 +25,15 @@ module Lda
     end
 
     def load_default_settings
-      self.max_iter = 20
+      self.max_iter = 20 
       self.convergence = 1e-6
       self.em_max_iter = 100
       self.em_convergence = 1e-4
-      self.num_topics = 20
+      self.num_topics = 5
       self.init_alpha = 0.3
       self.est_alpha = 1
 
-      [20, 1e-6, 100, 1e-4, 20, 0.3, 1]
+      [20, 1e-6, 100, 1e-4, 5, 0.3, 1]
     end
 
     def load_corpus(filename)
